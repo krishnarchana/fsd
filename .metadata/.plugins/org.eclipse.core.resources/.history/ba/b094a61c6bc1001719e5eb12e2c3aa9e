@@ -1,0 +1,89 @@
+body{
+	padding-top: 50px;
+	background-color: #fff;
+}
+
+/*
+form css
+*/
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+#loginContainer{
+	padding-top:100px;
+}
+.form-horizontal .control-label {
+	text-align:left;
+}
+.form-control {
+	width:75%;
+}
+.btn-block{
+	width:75%;
+}
+/*
+bootstrap css for header
+*/
+.navbar{
+	margin-bottom: 0px;
+}
+.navbar-brand {
+	padding-top:35px;
+	padding-bottom:0px;
+	height:40px;
+}
+.navbar-inverse {
+	background-color:#fff;
+	border-color:#fff;
+}
+.navbar-toggle {
+	background-color:#000;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	border-color:#fff;
+	height:80px
+}
+#title{
+	margin-bottom:0px;
+}
+#navbar li a{
+	text-decoration:underline;
+	color:#000;
+	padding-bottom:0px;
+}
+h3{
+	padding-top:30px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+h4{
+	margin-bottom:30px;
+}
+hr{
+	margin-top:10px;
+	margin-bottom:0px;
+	color:#FFF;
+	width:100%;
+}
+.label{
+	font-size:70%;
+}		
+.label-wrap {
+    position: absolute;
+	right:0px;
+    height: 10px;
+}
+.row{
+margin-left:0px;
+}
+.btn-primary {
+	width:100%;
+}

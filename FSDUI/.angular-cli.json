@@ -8,7 +8,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
+      "assets",
         "js"
       ],
       "index": "index.html",
@@ -19,10 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-       "styles.css"
+       "styles.css",
+       "assets/bootstrap.min.css",
+       "assets/styles.css"
       ],
       "scripts": [
-      "js/jquery-3.2.1.min.js"
+      "js/jquery-3.2.1.min.js",
+      "js/bootstrap.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

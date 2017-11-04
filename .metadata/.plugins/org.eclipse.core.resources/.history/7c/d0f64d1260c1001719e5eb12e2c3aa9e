@@ -1,0 +1,57 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: '
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <h3 class="text-center">Policy Management System</h3>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav nav-pills pull-right">
+          <li><a >Register</a></li>
+          <li><a >About Us</a></li>
+          <li><a >Contact Us</a><span class="label-wrap"><span class="label label-info">New User?</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="loginContainer" class="container">
+      <form class="form-signin form-horizontal" role="form">
+        <h4 class="form-signin-heading">Welcome to the Site</h4>
+          <div class="form-group">
+            <label for="email" class="col-sm-3 control-label">User ID</label>
+            <div class="col-sm-9">
+              <input type="email" id="email"  class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">Password</label>
+            <div class="col-sm-9">
+              <input type="password" id="password" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-7 col-sm-offset-3">
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </div>
+          </div>
+      </form>
+    </div>
+',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'app';
+}

@@ -1,0 +1,14 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login.component';
+
+const contactRoutes: Routes = [
+  { path: 'contact', component: LoginComponent }
+];
+
+
+@NgModule({
+  imports: [ RouterModule.forRoot(loginRoutes) ],
+  exports: [ RouterModule ]
+})
+export class LoginRoutingModule { }

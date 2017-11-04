@@ -1,0 +1,11 @@
+1509781852359	Move 'config.js' to 'js'
+1509782724362	Move 'main.css' to 'src'
+1509782747998	Rename resource 'main.css'
+1509783751369	Move 'styles.css' to 'css'
+1509784430052	Move 'css' to 'assets'
+1509784496797	Move 'styles.css' to 'node_modules'
+1509784560455	Move 'styles.css' to 'src'
+1509784765717	Delete element
+1509788751742	Move 'jquery-3.2.1.min.js' to 'src'
+1509790298522	Move 'jquery-3.2.1.min.js' to 'js'
+1509799854131	Move 9 resources to 'assets'
