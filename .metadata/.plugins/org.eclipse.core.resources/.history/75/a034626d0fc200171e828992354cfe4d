@@ -1,0 +1,14 @@
+import { Component} from '@angular/core';
+
+@Component({
+  moduleId: module.id,
+  templateUrl: './register.component.html'
+})
+export class RegisterComponent {
+  model: any = {};
+  onReset() {
+        this.model.firstName: [''],
+        this.model.lastName: ['']
+  }
+}
+

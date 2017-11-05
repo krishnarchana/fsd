@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<h3 class="text-center">Policy Management System</h3>
+			</div>
+			<hr>
+			<div class="container">
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+				  <ul class="nav navbar-nav nav-pills pull-right">
+					<li><a routerLink="/register" routerLinkActive="active">Register</a><span class="label-wrap" *ngIf="route != 'login'"><span class="label label-info">New User?</span></span></li>
+					<li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+					<li><a routerLink="/contact" routerLinkActive="active">Contact Us</a></li>
+				  </ul>
+				</div>
+			</div>
+		</nav>
+		<router-outlet></router-outlet>

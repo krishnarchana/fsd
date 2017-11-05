@@ -1,0 +1,39 @@
+import {Component, OnInit, Input} from '@angular/core';
+
+import {ControlGroup, FORM_DIRECTIVES} from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+@Component({
+  moduleId: module.id,
+  directives: [FORM_DIRECTIVES],
+  templateUrl: './register.component.html'
+})
+export class RegisterComponent implements OnInit {
+  formModel: ControlGroup;
+  hasSubmitted: boolean;
+
+  @Input() isResetting = false;
+
+  constructor(private _formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    if (!this.formModel) {
+      this._buildForm();
+    }
+  }
+
+  onReset() {
+    this._buildForm();
+    this.isResetting = true;
+    setTimeout(() => this.isResetting = false, 0);
+    return false;
+  }
+
+  _buildForm() {
+    this.formModel = this._formBuilder.group({
+        firstName: [''],
+        lastName: ['']
+    });
+  }
+}
+
