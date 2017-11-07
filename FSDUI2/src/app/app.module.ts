@@ -48,8 +48,7 @@ import { BaseRequestOptions } from '@angular/http';
   LoginAuthenticationService,
   UserService,
   MockBackend,
-  BaseRequestOptions,
-  fakeBackendProvider
+  BaseRequestOptions
 ],
   bootstrap: [AppComponent]
 })

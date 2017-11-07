@@ -5,22 +5,21 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class LoginAuthenticationService {
-    constructor(private http: Http) { }
+private getURL = "http://localhost:8080/RESTfulExample/rest/hello/gopi";
+    constructor(private http: Http) {}
 
-    login(email: string, password: string) {
-        return this.http.post('/api/authenticate', JSON.stringify({ email: email, password: password }))
-            .map((response: Response) => {
-                // login successful if there's a jwt token in the response
-                let user = response.json();
-                if (user && user.token) {
-                    // store user details and jwt token in local storage to keep user logged in between page refreshes
-                    localStorage.setItem('currentUser', JSON.stringify(user));
-                }
-            });
+    getData():Observable<any>{
+    console.log("1212");
+    return this.http.get(this.getURL)
+        .map((res:Response) => res);
+    }
+
+    login() {
+
     }
 
     logout() {
         // remove user from local storage to log user out
-        localStorage.removeItem('currentUser');
+        //localStorage.removeItem('currentUser');
     }
 }
