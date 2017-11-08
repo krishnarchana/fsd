@@ -15,6 +15,8 @@ import { AlertComponent } from './alert.component';
 import { RegisterComponent } from './register.component';
 import { RegisterRoutingModule } from './register-routing';
 
+import { EqualValidator } from './equal-validator.directive';
+
 import { AlertService } from './alert.service';
 import { LoginAuthenticationService } from './loginAuth.service';
 import { UserService } from './user.service';
@@ -31,7 +33,8 @@ import { BaseRequestOptions } from '@angular/http';
     ContactComponent,
     AboutComponent,
     AlertComponent,
-    RegisterComponent
+    RegisterComponent,
+    EqualValidator
   ],
   imports: [
     BrowserModule,
