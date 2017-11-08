@@ -53,7 +53,7 @@
 					<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
 						<label for="email" class="col-md-4 control-label">Email</label>
 						<div class="col-md-8">
-							<input type="email" name="email" [(ngModel)]="model.email" #email="ngModel" class="form-control" required>
+							<input type="email" name="email" [(ngModel)]="model.email" #email="ngModel" class="form-control" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
 							<div *ngIf="f.submitted && !email.valid" class="help-block">Email is required and format should be <i>abc@gmail.com</i>.</div>
 						</div>
 					</div>

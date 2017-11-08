@@ -12,7 +12,6 @@ export class LoginComponent implements OnInit {
   model: any = {};
     loading = false;
     returnUrl: string;
-
     constructor(
         private route: ActivatedRoute,
         private router: Router,
@@ -28,6 +27,7 @@ export class LoginComponent implements OnInit {
           .subscribe(
               data => {
                   console.log("good",data);
+                   //this.router.navigate(['/contact']);
               },
               error => {
                   this.alertService.error(error);
@@ -39,6 +39,15 @@ export class LoginComponent implements OnInit {
     }
 
     login() {
-
+      this.authenticationService.login(this.model.email, this.model.password)
+        .subscribe(
+            data => {
+                console.log("good",data);
+                 //this.router.navigate(['/contact']);
+            },
+            error => {
+                this.alertService.error(error);
+                this.loading = false;
+            });
     }
 }

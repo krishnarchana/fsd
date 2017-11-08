@@ -10,8 +10,8 @@
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
             <label for="email" class="col-sm-3 control-label">Username</label>
             <div class="col-sm-9">
-            <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" required />
-            <div *ngIf="f.submitted && !email.valid" class="help-block">Username is required</div>
+            <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+            <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required and format should be <i>abc@gmail.com</i>.</div>
             </div>
         </div>
         <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">

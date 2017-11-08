@@ -14,8 +14,17 @@ private getURL = "http://localhost:8080/RESTfulExample/rest/hello/gopi";
         .map((res:Response) => res);
     }
 
-    login() {
-
+    login(email: string, password: string) {
+        return this.http.post('http://localhost:8080/RESTfulExample/rest/hello/login', JSON.stringify({ email: email, password: password }))
+            .map((response: Response) => response);
+          //  response.json();
+                // login successful if there's a jwt token in the response
+                //let user = response.json();
+                //if (user && user.token) {
+                    // store user details and jwt token in local storage to keep user logged in between page refreshes
+                    //localStorage.setItem('currentUser', JSON.stringify(user));
+              //  }
+          //  });
     }
 
     logout() {
