@@ -6,6 +6,10 @@ body{
 /*
 form css
 */
+.labelMandatory:after{
+ content:"*" ;
+ color:red
+}
 *[role="form"] {
     max-width: 530px;
     padding: 15px;
@@ -18,7 +22,7 @@ form css
     margin-bottom: 1em;
 }
 #loginContainer{
-	padding-top:150px;
+	padding-top:120px;
 }
 .form-horizontal .control-label {
 	text-align:left;
@@ -81,16 +85,15 @@ hr{
 	right:10px;
     height: 10px;
 }
-.row{
-margin-left:0px;
+.jumbotron{
+	background-color: #fff;
+	padding-top: 80px;
 }
-.btn-primary {
+#reset, #register {
+    display: inline-block;
+    vertical-align: top;
+		width: 100%;
+}
+.btn-primary{
 	width:75%;
-}
-.btn-success {
-	width:100%;
-}
-.col-md-6 {
-    width: 50%;
-    padding-left: 10px;
 }

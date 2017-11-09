@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
           .subscribe(
               data => {
                   console.log("good",data);
-                   //this.router.navigate(['/contact']);
+
               },
               error => {
                   this.alertService.error(error);
@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         .subscribe(
             data => {
                 console.log("good",data);
-                 //this.router.navigate(['/contact']);
+                 this.router.navigate(['/userPage']);                 
             },
             error => {
                 this.alertService.error(error);

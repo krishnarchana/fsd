@@ -26,4 +26,10 @@ export class AppComponent {
       }
     });
   }
+  isIn = false;
+
+ toggleState() { // click handler for navbar toggle
+    const bool = this.isIn;
+    this.isIn = bool === false ? true : false;
+ }
 }
