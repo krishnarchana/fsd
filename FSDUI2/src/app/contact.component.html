@@ -13,13 +13,12 @@
 		</nav>
 
 		<div id="loginContainer" class="container">
-			<form class="well span8 form-signin form-horizontal" name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+			<form class="form-signin form-horizontal" role="form" name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
 	        <div class="row">
-	            <div class="span3">
 								<div class="form-group">
 										<label for="fullname" class="col-sm-3 control-label">FullName</label>
 										<div class="col-sm-9" [ngClass]="{ 'has-error': f.submitted && !fullname.valid }">
-										<input type="text" class="form-control" name="fullname" [(ngModel)]="model.fullname" #fullname="ngModel" required/>
+										<input type="text" class="form-control" minlength="8" maxlength="20" name="fullname" [(ngModel)]="model.fullname" #fullname="ngModel" required/>
 										<div *ngIf="f.submitted && !fullname.valid" class="help-block">FullName is required</div>
 										</div>
 								</div>
@@ -42,17 +41,18 @@
 										<div *ngIf="f.submitted && !subject.valid" class="help-block">Select any one item</div>
 										</div>
 								</div>
-	            </div>
-	            <div class="span5">
 								<div class="form-group">
 										<label for="message" class="col-sm-3 control-label">Message</label>
 										<div class="col-sm-9" [ngClass]="{ 'has-error': f.submitted && !message.valid }">
-										<input type="text" class="form-control" name="message" [(ngModel)]="model.message" #message="ngModel" required/>
+										<textarea class="form-control" type="textarea" name="message" [(ngModel)]="model.message" #message="ngModel" required maxlength="140" rows="7"></textarea>
 										<div *ngIf="f.submitted && !message.valid" class="help-block">Message is required</div>
 										</div>
 								</div>
-	            </div>
-							<button class="btn btn-primary pull-right" type="submit">Send</button>
+								<div class="form-group">
+									<div class="col-sm-9 col-md-offset-3">
+										<button class="btn btn-primary" id="contactBtn">Send</button>
+									</div>
+								</div>
 	        </div>
 	    </form>
 		</div>

@@ -8,23 +8,21 @@ export class LoginAuthenticationService {
 private getURL = "http://localhost:8080/RESTfulExample/rest/hello/gopi";
     constructor(private http: Http) {}
 
-    getData():Observable<any>{
-    console.log("1212");
-    return this.http.get(this.getURL)
-        .map((res:Response) => res);
+    //getData():Observable<any>{
+    //console.log("1212");
+    //return this.http.get(this.getURL)
+        //.map((res:Response) => res);
+    //}
+    //  return this.http.post('http://localhost:8080/RESTfulExample/rest', JSON.stringify({ email: email, password: password }))
+    getData(){
+
     }
 
-    login(email: string, password: string) {
-        return this.http.post('http://localhost:8080/RESTfulExample/rest/hello/login', JSON.stringify({ email: email, password: password }))
+    login(userid: string, password: string) {
+
+        return this.http.get('http://localhost:8080/RESTfulExample/rest/hello/gopi')
             .map((response: Response) => response);
-          //  response.json();
-                // login successful if there's a jwt token in the response
-                //let user = response.json();
-                //if (user && user.token) {
-                    // store user details and jwt token in local storage to keep user logged in between page refreshes
-                    //localStorage.setItem('currentUser', JSON.stringify(user));
-              //  }
-          //  });
+
     }
 
     logout() {

@@ -19,11 +19,13 @@ import {  UserPageRoutingModule } from './userpage-routing';
 import { AdminPageComponent } from './adminpage.component';
 import {  AdminPageRoutingModule } from './adminpage-routing';
 
-import { EqualValidator } from './equal-validator.directive';
+import { EqualValidatorDirective } from './equal-validator.directive';
 
 import { AlertService } from './alert.service';
 import { LoginAuthenticationService } from './loginAuth.service';
+import { RegistrationService } from './register.service';
 import { UserService } from './user.service';
+import { RegisterUser } from './registerUser';
 
 // used to create fake backend
 import { fakeBackendProvider } from './fake.background';
@@ -38,7 +40,7 @@ import { BaseRequestOptions } from '@angular/http';
     AboutComponent,
     AlertComponent,
     RegisterComponent,
-    EqualValidator,
+    EqualValidatorDirective,
     UserPageComponent,
     AdminPageComponent
   ],
@@ -57,9 +59,11 @@ import { BaseRequestOptions } from '@angular/http';
   providers: [
   AlertService,
   LoginAuthenticationService,
+  RegistrationService,
   UserService,
   MockBackend,
-  BaseRequestOptions
+  BaseRequestOptions,
+  RegisterUser
 ],
   bootstrap: [AppComponent]
 })
