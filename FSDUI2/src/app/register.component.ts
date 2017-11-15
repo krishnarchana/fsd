@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 //import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 //import { NativeDateAdapter } from '@angular/material';
@@ -16,6 +16,7 @@ import { LoginComponent } from './login.component';
 export class RegisterComponent implements OnInit {
   //model: any = {};
   loading = false;
+  @ViewChild('birthDate')birthDate: string;
   constructor(
     public model: RegisterUser,
     private route: ActivatedRoute,
@@ -24,6 +25,26 @@ export class RegisterComponent implements OnInit {
     private alertService: AlertService,
     public loginComponent: LoginComponent){
    }
+
+   ngAfterViewChecked(){
+    //document.getElementById('loginInput').value = '123344565';
+    var input =   (<HTMLInputElement>document.getElementById('dateField'));
+    //  var input = document.getElementById("dateField");
+      var today = new Date();
+      var day = new String(today.getDate());
+
+      // Set month to string to add leading 0
+      var mon = new String(today.getMonth()+1); //January is 0!
+      var yr = new String(today.getFullYear());
+
+      if(mon.length < 2) { mon = "0" + mon; }
+      if(day.length < 2) { day = "0" + day; }
+
+      var date =  yr + '-' + mon + '-' + day ;
+
+      input.disabled = false;
+      input.setAttribute('max', date);
+  }
 
   ngOnInit(){ }
 
